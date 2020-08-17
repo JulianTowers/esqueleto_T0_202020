@@ -29,17 +29,20 @@ public class TestModelo {
 	}
 
 	@Test
-	public void testDarTamano() {
+	public void testDarTamano() 
+	{
 		// TODO
 	}
 
 	@Test
-	public void testAgregar() {
+	public void testAgregar() 
+	{
 		// TODO Completar la prueba
 	}
 
 	@Test
-	public void testBuscar() {
+	public void testBuscar() 
+	{
 		setUp2();
 		// TODO Completar la prueba
 	}

@@ -59,6 +59,9 @@ public class ArregloDinamico implements IArregloDinamico {
 
 		public String darElemento(int i) {
 			// TODO implementar
+			{
+				
+			}
 			return null;
 		}
 

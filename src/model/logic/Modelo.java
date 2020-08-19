@@ -1,4 +1,4 @@
-xpackage model.logic;
+package model.logic;
 
 import model.data_structures.ArregloDinamico;
 import model.data_structures.IArregloDinamico;

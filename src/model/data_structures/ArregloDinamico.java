@@ -32,13 +32,13 @@ public class ArregloDinamico implements IArregloDinamico {
                tamanoAct = 0;
         }
         
-		public void agregar( String dato )
+		public void agregar( T dato )
         {
                if ( tamanoAct == tamanoMax )
                {  // caso de arreglo lleno (aumentar tamaNo)
                     tamanoMax = 2 * tamanoMax;
-                    String [ ] copia = elementos;
-                    elementos = new String[tamanoMax];
+                    T [ ] copia = elementos;
+                    elementos = (T[]) new Object [tamanoMax];
                     for ( int i = 0; i < tamanoAct; i++)
                     {
                      	 elementos[i] = copia[i];
@@ -61,20 +61,53 @@ public class ArregloDinamico implements IArregloDinamico {
 			// TODO implementar
 			{
 				
+				elementos = new String[tamanoMax];
+				for(int j=0;j<elementos.length;j++)
+				{
+					if(j==i)
+					{
+						return elementos[i];
+					}
+				}
+				
 			}
 			return null;
 		}
-
-		public String buscar(String dato) {
+		public String buscar(String dato) 
+		{
+		String rta=null;
+		for(int i=0; i<elementos.length;i++)
+		{
+			String m =elementos[i];
+			if(m.equals(dato))
+			{
+				rta=m;
+			}
+			
+			}
+		return rta;
 			// TODO implementar
 			// Recomendacion: Usar el criterio de comparacion natural (metodo compareTo()) definido en Strings.
-			return null;
 		}
 
-		public String eliminar(String dato) {
+		public String eliminar(String dato) 
+		{
+			String rta=null;
+			for(int i=0; i<elementos.length;i++)
+			{
+				if(dato.equals(elementos[i]))
+				{
+					for(int j=i; j<elementos.length;j++)
+					{
+						elementos[i]=elementos[j+1];
+					         rta="Se elimino"   ;     
+					}
+				}
+			}
+			return rta;
 			// TODO implementar
 			// Recomendacion: Usar el criterio de comparacion natural (metodo compareTo()) definido en Strings.
-			return null;
+			
 		}
 
 }
